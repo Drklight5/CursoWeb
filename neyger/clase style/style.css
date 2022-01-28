@@ -1,0 +1,43 @@
+h1{
+    color: red;
+    font-size: 3em;
+}
+
+.bigtittle{
+    color: #abcdef;
+    font-size: 100px; 
+}
+h1:hover{
+    color: green;
+}
+#si{
+    color: rgba(100, 150, 100, 0.5);
+    font-size: 10px;
+}
+@media (min-width:400px) {
+    h1{
+        font-size: 5em;
+    }
+}
+
+
+.T1{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+.T2{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(30, 143, 137);
+}
+.T3{
+    height: 100vw;
+    width: 100vw;
+    background-color: rgb(102, 30, 143);
+}
+.T4{
+    height: 100%;
+    width: 100;
+    background-color: rgb(30, 143, 137);
+}
