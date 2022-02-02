@@ -1,0 +1,64 @@
+:root{
+  --color-fav:#1518d4;
+    --color-secundario: rgb(238, 12, 12);
+    --altura: 100px;
+    --color-pikachu: yellow; 
+    --color-carlos: black;
+    --color-cerdo: pink;
+    --color-yumi: white;
+    --color-twitch: purple;
+}
+
+nav{
+    width: 100%;
+    height: 3rem;
+    background-color: var(--color-secundario);
+}
+
+main{
+    color: var(--color-fav)
+}
+
+.color1{
+    width: 100px;
+    background-color: var(--color-segundario);
+    height: var(--altura);
+}
+
+.color2{
+    width: 200px;
+    background-color: var(--color-fav);
+    height: var(--altura)
+}
+
+.boton-1{
+    height:2rem;
+    width:2rem;
+    background-color: var(--color-secundario);
+}
+
+.boton-2{
+    height:2rem;
+    width:2rem;
+    background-color: var(--color-fav);
+}
+
+.color3{
+    color: var(--color-carlos);
+}
+
+.color4{
+    color: var(--color-cerdo);
+}
+
+.color5{
+    color: var(--color-yumi);
+}
+
+.color6{
+    color: var(--color-pikachu);
+}
+
+.color7{
+    color: var(--color-twitch);
+}
