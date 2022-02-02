@@ -5,18 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <h1 class="T-1">Gatos</h1>
-        <div class="Text-big">
-            <p  class="T-1">bla bla bla</p>
-            <p class="T-2">bla bla bla1</p>
-            <p class="T-3">bla bla bla2</p>
-            <p class="T-4">bla bla bla3</p>
-            <p class="T-5">bla bla bla4</p>
-        </div>
-    </main>   
+   <h1>adwad</h1> 
+   <p id="punto">asdwdasd</p>
+   <button onclick="cuentas()">dale click</button>
+    <button onclick="doble()">Tu doble de edad</button>
+   <script>
+       var nombre = 'neyger' ;
+       var edad = 14
+       cuentas();
+
+       function cuentas(){
+           alert(nombre + " es pro ");
+       }
+       function doble(){
+           var doble = edad / 2;
+           alert(" la mitad de tu edad es " + doble);
+           document.getElementById("punto").classList.add("bg-primary");
+       }
+   </script>
 </body>
 </html>
