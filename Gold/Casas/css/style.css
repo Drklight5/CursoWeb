@@ -1,0 +1,8 @@
+.fondo{
+    background-color:rgb(49, 47, 79); 
+}
+.medio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
