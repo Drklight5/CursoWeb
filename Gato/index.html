@@ -2,14 +2,33 @@
 <html>
     <head>
 
+        <style>
+
+        </style>
     </head>
-    <body>
-        <h1>Hola mundo</h1>
-        <p>Hola soy un amante de gatos</p>
+    <body id="bro">
+        <h1 id="h">Hola mundo</h1>
+        <p id="parf">Hola soy un amante de gatos</p>
         <ul>
-            <li>Hola</li>
-            <li>aDIÓA</li>
+            <li id="hola" >Hola</li>
+            <li>adiós</li>
+            <button onclick="myname()">Cambiar color</button>
         </ul>
-        <img src="" alt=""/>
+        <script type="text/javascript">
+            var nombre = "Valeria";
+            var iscolor = true;
+
+            function myname()
+            {
+                if (iscolor == true){
+                    document.getElementById("bro").style.backgroundColor = "red";
+                    iscolor = false;
+                }
+                else {
+                    document.getElementById("bro").style.backgroundColor = "blue";iscolor = true;
+                }
+                
+            }
+        </script>
     </body>
 </html>
