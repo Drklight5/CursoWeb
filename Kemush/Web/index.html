@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="/Kemush/img/IconSonido.jpg"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letra Sonido</title>
+    <title>Boton Sonico</title>
     <style>
-        
+        main {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+            color:rgb(255, 255, 255);
+        }
     </style>
 </head>
 <body>
-    <h1>Letra Sonido</h1>
-        <button onclick="music.play()">Gato</button>
-        <button onclick="music2.play()" >MiniPekka</button>
-        <button onclick="music3.play()" >Piu Piu</button>
-        <button onclick="music4.play()" >Fnaf</button>
-        <button onclick="music5.play()">Esqueleto</button>
+    <main>
+        <h1> Boton Sonico </h1>
+        <div>
+            <button onclick="music.play()">Gato</button>
+            <button onclick="music2.play()">MiniPekka</button>
+            <button onclick="music3.play()">Piu Piu</button>
+            <button onclick="music4.play()">Fnaf</button>
+            <button onclick="music5.play()">Esqueleto</button>
+            <button onclick="music6.play()">jijija</button>
+            <button onclick="music7.play()">Intro Clash</button>
+            <button onclick="music8.play()">Discord</button>
+            <button onclick="music9.play()">UwU</button>
+        </div>
+        <div>
+            <button onclick="music10.play()">Burandecuin</button>
+        </div>
+        </main>
+        <a href="Me.html">Boton</a>
     <script>
         const music = new Audio('/Kemush/img/gatoxd.mp3');
         const music2 = new Audio('/Kemush/img/pekka.mp3');
         const music3 = new Audio('/Kemush/img/PiuPiu.mp3');
         const music4 = new Audio('/Kemush/img/Jumpscare.mp3')
         const music5 = new Audio('/Kemush/img/Esqueleto.mp3')
+        const music6 = new Audio('/Kemush/img/jijijaja.mp3')
+        const music7 = new Audio('/Kemush/img/IntroClash.mp3')
+        const music8 = new Audio('/Kemush/img/Discord.mp3')
+        const music9 = new Audio('/Kemush/img/uwu.mp3')
+        const music10 = new Audio('/Kemush/img/burandecuin.mp3')
     </script>
 </body>
 </html>
