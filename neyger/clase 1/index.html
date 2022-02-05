@@ -1,58 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .uno{
-            display: inline;
-            position:sticky;
-            top: 100px;
-            left: 100px;
-            background-color: blue;
-            height: 200px;
-            width: 500px;
-        }
-        .dos{
-            position:sticky ;
-            top: 350px;
-            right: 100px;
-            background-color: rgb(255, 238, 0);
-            height: 200px;
-            width: 500px;
-        }
-        main{
-            overflow-x: scroll;
-            height: s;
-        }
-    </style>
-</head>
-<body>
-    <main class="container">  </main>
-   <h1>adwad</h1> 
-   <p id="punto">asdwdasd</p>
-   <button onclick="cuentas()">dale click</button>
-    <button onclick="doble()">Tu doble de edad</button>
-    <div style="height:1500px background-color: " >
-    <div class="uno"></div>
-    <div class="dos"></div>
-    <div class="tres"></div>
-</div>
-   <script>
-       var nombre = 'neyger' ;
-       var edad = 14
-       cuentas();
+<html>
+    <head>
+        <style>
 
-       function cuentas(){
-           alert(nombre + " es pro ");
-       }
-       function doble(){
-           var doble = edad / 2;
-           alert(" la mitad de tu edad es " + doble);
-           document.getElementById("punto").classList.add("bg-primary");
-       }
-   </script>
-</body>
+        </style>
+    </head>
+    <head>
+        <body id="bro">
+            <h1 id="h">Hola</h1>
+            <p id="parf">Hola xd</p>
+            <ul>
+                <li id="hola">hola</li>
+                <li>adios</li>
+                <button onclick="myname()">cambiar color</button>
+            </ul>
+            <script type="text/javascript">
+
+                var nombre="kemush";
+                var iscolor = true;
+                function myname(){
+
+                    if (iscolor){
+                        document.getElementById("bro").style.backgroundColor = "red";
+                        iscolor = false;
+                    }
+                    else{
+                        document.getElementById("bro").style.backgroundColor = "blue";
+                        iscolor = true;
+                    }
+                        
+                    //nombre = prompt("Escribe tu nombre")
+                    //alert(nombre)
+                    //document.getElementById("h").innerHTML = nombre;
+                }
+            </script>
+        </body>
+    </head>
 </html>
