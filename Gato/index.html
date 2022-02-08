@@ -7,27 +7,42 @@
         </style>
     </head>
     <body id="bro">
-        <h1 id="h">Hola mundo</h1>
-        <p id="parf">Hola soy un amante de gatos</p>
-        <ul>
-            <li id="hola" >Hola</li>
-            <li>adiós</li>
-            <button onclick="myname()">Cambiar color</button>
-        </ul>
+        <h1 id="h">Crea tu sandwich</h1>
+        <p id="parf">Agrega los ingredientes para tu sandwich</p>
+        <button onclick="lechuga()">Lechuga</button>
+        <button onclick="pan()">Pan</button>
+        <button onclick="queso()">Queso</button>
+        <button onclick="jamon()">Jamón</button>
+        <button onclick="mayo()">Mayonesa</button>
+        <br/>
+        <button onclick="preprar()">Prepara el sandwich</button>
         <script type="text/javascript">
-            var nombre = "Valeria";
-            var iscolor = true;
+            var cantidad = 0;
+            var sandwich = "";
 
-            function myname()
-            {
-                if (iscolor == true){
-                    document.getElementById("bro").style.backgroundColor = "red";
-                    iscolor = false;
-                }
-                else {
-                    document.getElementById("bro").style.backgroundColor = "blue";iscolor = true;
-                }
-                
+            function lechuga(){
+                cantidad ++;
+                sandwich = sandwich + " lechuga,";
+            }
+            function pan(){
+                cantidad = cantidad + 1;
+                sandwich = sandwich + " pan,";
+            }
+            function queso(){
+                cantidad = cantidad + 1;
+                sandwich = sandwich + " queso,";
+            }
+            function jamon(){
+                cantidad = cantidad + 1;
+                sandwich = sandwich + " jamón,";
+            }
+            function mayo(){
+                cantidad = cantidad + 1;
+                sandwich = sandwich + " mayo,";
+            }
+            function preprar(){
+                alert(sandwich + cantidad);
+                cantidad = 0;
             }
         </script>
     </body>
