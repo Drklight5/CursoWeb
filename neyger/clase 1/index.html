@@ -9,30 +9,45 @@
         <body id="bro">
             <h1 id="h">Hola</h1>
             <p id="parf">Hola xd</p>
-            <ul>
-                <li id="hola">hola</li>
-                <li>adios</li>
-                <button onclick="myname()">cambiar color</button>
-            </ul>
-            <script type="text/javascript">
+           
+                <button onclick="lechuga()">Lechuga</button>
+                <button onclick="pan()">Pan</button>
+                <button onclick="queso()">Queso</button>
+                <button onclick="jamon()">Jamón</button>
+                <button onclick="mayo()">Mayonesa</button>
+                <br/>
+                <button onclick="prepar()">Preparar el sandwich</button>
+                <script type="text/javascript">
+                var cantidad = 0;
+                var sandwich = "";
 
-                var nombre="kemush";
-                var iscolor = true;
-                function myname(){
-
-                    if (iscolor){
-                        document.getElementById("bro").style.backgroundColor = "red";
-                        iscolor = false;
-                    }
-                    else{
-                        document.getElementById("bro").style.backgroundColor = "blue";
-                        iscolor = true;
-                    }
-                        
-                    //nombre = prompt("Escribe tu nombre")
-                    //alert(nombre)
-                    //document.getElementById("h").innerHTML = nombre;
+                function lechuga(){
+                    cantidad = cantidad + 1;
+                    sandwich = sandwich + " lechuga,";
                 }
+                function pan(){
+                    cantidad = cantidad + 1;
+                    sandwich = sandwich + " sandwich,";
+                }
+                function queso(){
+                    cantidad = cantidad + 1;
+                    sandwich = sandwich + " queso,";
+                }
+                function jamon(){
+                    cantidad = cantidad + 1;
+                    sandwich = sandwich + " jamon,";
+                }
+                function mayo(){
+                    cantidad = cantidad + 1;
+                    sandwich = sandwich + " mayo,";
+                }
+
+                function prepar(){
+                    alert(sandwich + cantidad);
+                    cantidad = 0;
+                    sandwich = "";
+                }
+
             </script>
         </body>
     </head>
