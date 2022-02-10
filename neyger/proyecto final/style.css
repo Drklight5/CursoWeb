@@ -50,3 +50,17 @@ body{
     padding-left: 40px;
     font-size: 500%; 
 }
+.T-6{
+    width: 50%;
+    
+    position: static;
+    
+    border: 2px solid black;
+}
+.T-7{
+    display: flex;
+    justify-content: space-around;
+}
+.T-8{
+    width: 50%;
+}
