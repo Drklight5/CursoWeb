@@ -1,33 +1,27 @@
+
 <!DOCTYPE html>
 <html>
     <head>
-
         <style>
-
         </style>
     </head>
     <body id="bro">
-        <h1 id="h">Hola mundo</h1>
-        <p id="parf">Hola soy un amante de gatos</p>
-        <ul>
-            <li id="hola" >Hola</li>
-            <li>adiós</li>
-            <button onclick="myname()">Cambiar color</button>
-        </ul>
-        <script type="text/javascript">
-            var nombre = "Valeria";
-            var iscolor = true;
+        <h1>Tu calculadora</h1>
+        <button onclick="suma()">Sumar</button>
+        <button onclick="resta()">Restar</button>
+        <button onclick="multi()">Multiplicar</button>
+        <button onclick="div()">Dividir</button>
 
-            function myname()
-            {
-                if (iscolor == true){
-                    document.getElementById("bro").style.backgroundColor = "red";
-                    iscolor = false;
-                }
-                else {
-                    document.getElementById("bro").style.backgroundColor = "blue";iscolor = true;
-                }
-                
+        <script type="text/javascript">
+            var n1 = 0;
+            var n2 = 0;
+            var result = 0;
+
+            function suma(){
+                n1 = parseInt(prompt("Escribe tu primer número"));
+                n2 = parseInt(prompt("Escribe tu segundo número"));
+                result = n1 + n2;
+                alert("La suma de " + n1 + " y " + n2 + " es " + result);
             }
         </script>
     </body>
