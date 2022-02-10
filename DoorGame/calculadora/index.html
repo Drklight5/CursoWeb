@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        main {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <main>
+        <h1> La Calculadora Ansestral </h1>
+        <button onclick="suma()">Suma</button>
+        <button onclick="resta()">Resta</button>
+    </main>
+    <script type="text/javascript">
+        var n1 = 0;
+        var n2 = 0;
+        var result = 0;
+
+        function suma(){
+            n1 = parseInt(prompt("xd"))
+            n2 = parseInt(prompt("xp"))
+            result = n1 + n2;
+            alert("que quieres bruh " + n1 + " bruh " + n2 + " a " + result);
+        }
+    </script>
+</body>
+</html>

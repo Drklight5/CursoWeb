@@ -1,48 +1,27 @@
+
 <!DOCTYPE html>
 <html>
     <head>
-
         <style>
-
         </style>
     </head>
     <body id="bro">
-        <h1 id="h">Crea tu sandwich</h1>
-        <p id="parf">Agrega los ingredientes para tu sandwich</p>
-        <button onclick="lechuga()">Lechuga</button>
-        <button onclick="pan()">Pan</button>
-        <button onclick="queso()">Queso</button>
-        <button onclick="jamon()">Jamón</button>
-        <button onclick="mayo()">Mayonesa</button>
-        <br/>
-        <button onclick="preprar()">Prepara el sandwich</button>
-        <script type="text/javascript">
-            var cantidad = 0;
-            var sandwich = "";
+        <h1>Tu calculadora</h1>
+        <button onclick="suma()">Sumar</button>
+        <button onclick="resta()">Restar</button>
+        <button onclick="multi()">Multiplicar</button>
+        <button onclick="div()">Dividir</button>
 
-            function lechuga(){
-                cantidad ++;
-                sandwich = sandwich + " lechuga,";
-            }
-            function pan(){
-                cantidad = cantidad + 1;
-                sandwich = sandwich + " pan,";
-            }
-            function queso(){
-                cantidad = cantidad + 1;
-                sandwich = sandwich + " queso,";
-            }
-            function jamon(){
-                cantidad = cantidad + 1;
-                sandwich = sandwich + " jamón,";
-            }
-            function mayo(){
-                cantidad = cantidad + 1;
-                sandwich = sandwich + " mayo,";
-            }
-            function preprar(){
-                alert(sandwich + cantidad);
-                cantidad = 0;
+        <script type="text/javascript">
+            var n1 = 0;
+            var n2 = 0;
+            var result = 0;
+
+            function suma(){
+                n1 = parseInt(prompt("Escribe tu primer número"));
+                n2 = parseInt(prompt("Escribe tu segundo número"));
+                result = n1 + n2;
+                alert("La suma de " + n1 + " y " + n2 + " es " + result);
             }
         </script>
     </body>

@@ -11,12 +11,22 @@
             flex-direction: column;
             align-items: center;
         }
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <h1> Mi Pagina </h1>
-    <div>
         <a href="Web"> Entrar </a>
-    </div>
+        <a onclick="boton()">CodePig</a>
+        <script>
+            function boton(){
+                n1 = parseInt(prompt("Ingresa Un Codigo"))
+                if (n1 == 8340){
+                    window.open("/Kemush/Web2/index.html");
+                }
+            }
+        </script>
 </body>
-</html>
+</html
