@@ -8,61 +8,49 @@
     </head>
     <head>
         <body id="bro">
-            <h1 id="h">Crea amburguesa</h1>
-            <p id="parf">Hola Agrega los ingredientes</p>
+            <h1>Calculadora</h1>
 
-            <button onclick="Lechuga()">Lechuga</button>
+            <button onclick="S()">+</button>
+            <button onclick="R()">-</button>
+            <button onclick="M()">x</button>
+            <button onclick="D()">÷</button>
 
-            <button onclick="Pan()">Pan</button>
 
-            <button onclick="Tomate()">Tomate</button>
-
-            <button onclick="Carne()">Carne</button>
-
-            <button onclick="Queso()">Capsu</button>
-
-            <button onclick="Preparar()">Preparar</button>
-
-            <script type="text/javascript">
-
-                var cantidad = 0;
-                var amburguesa = "";
             
-                function Lechuga()
-                {
-                    cantidad = cantidad + 1
-                    amburguesa = amburguesa.concat("Lechuga,");
-                }   
+            <script type="text/javascript">
+                var numero1 = 0;
+                var numero2 = 0;
+                var resultado = 0;
 
-                function Pan()
+                function S()
                 {
-                    cantidad = cantidad + 1
-                    amburguesa = amburguesa.concat("Pan,");
-                } 
-
-                function Queso()
-                {
-                    cantidad = cantidad + 1
-                    amburguesa = amburguesa.concat("Queso,");
-                }   
-
-                function Carne()
-                {
-                    cantidad = cantidad + 1
-                    amburguesa = amburguesa.concat("Jamon,");
+                    numero1 = parseInt(prompt(""))
+                    numero2 = parseInt(prompt(""))
+                    resultado = numero1 + numero2;
+                    alert(resultado)
                 }  
-
-                function Tomate()
+                function R()
                 {
-                    cantidad = cantidad + 1
-                    amburguesa = amburguesa.concat("Mayo,");
-                }
-
-                function Preparar()
+                    numero1 = parseInt(prompt(""))
+                    numero2 = parseInt(prompt(""))
+                    resultado = numero1 - numero2;
+                    alert(resultado)
+                } 
+                function M()
                 {
-                    alert(amburguesa + cantidad);
-                    cantidad = 0;
-                }   
+                    numero1 = parseInt(prompt(""))
+                    numero2 = parseInt(prompt(""))
+                    resultado = numero1 * numero2;
+                    alert(resultado)
+                }    
+                function D()
+                {
+                    numero1 = parseInt(prompt(""))
+                    numero2 = parseInt(prompt(""))
+                    resultado = numero1 / numero2;
+                    alert(resultado)
+                }      
+
             </script>
         </body>
     </head>
