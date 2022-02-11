@@ -51,7 +51,7 @@ body{
     font-size: 500%; 
 }
 .T-6{
-    width: 50%;
+    width: 300px;
     
     position: static;
     
@@ -61,6 +61,11 @@ body{
     display: flex;
     justify-content: space-around;
 }
+
 .T-8{
-    width: 50%;
+    width: 250px;
+    
+    position: static;
+    
+    border: 2px solid black;
 }
