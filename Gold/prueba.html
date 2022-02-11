@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+
+        </style>
+    </head>
+    <head>
+        <body id="bro">
+            <h1>Calculadora</h1>
+
+            <button onclick="S()">+</button>
+            <button onclick="R()">-</button>
+            <button onclick="M()">x</button>
+            <button onclick="D()">÷</button>
+
+
+            
+            <script type="text/javascript">
+                var numero1 = 0;
+                var numero2 = 0;
+                var resultado = 0;
+
+                function S()
+                {
+                    numero1 = parseInt(prompt(""))
+                    numero2 = parseInt(prompt(""))
+                    resultado = numero1 + numero2;
+                    alert(resultado)
+                }  
+                function R()
+                {
+                    numero1 = parseInt(prompt(""))
+                    numero2 = parseInt(prompt(""))
+                    resultado = numero1 - numero2;
+                    alert(resultado)
+                } 
+                function M()
+                {
+                    numero1 = parseInt(prompt(""))
+                    numero2 = parseInt(prompt(""))
+                    resultado = numero1 * numero2;
+                    alert(resultado)
+                }    
+                function D()
+                {
+                    numero1 = parseInt(prompt(""))
+                    numero2 = parseInt(prompt(""))
+                    resultado = numero1 / numero2;
+                    alert(resultado)
+                }      
+
+            </script>
+        </body>
+    </head>
+</html>
