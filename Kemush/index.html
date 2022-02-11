@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/Kemush/img/VisualStudio.png"
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiPagina</title>
+    <style>
+        body {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <h1> Mi Pagina </h1>
-    <a href="Web"> Web </a>
+        <a href="Web"> Entrar </a>
+        <a onclick="boton()">CodePig</a>
+        <script>
+            function boton(){
+                n1 = parseInt(prompt("Ingresa Un Codigo"))
+                if (n1 == 8340){
+                    window.open("/Kemush/Web2/index.html");
+                }
+            }
+        </script>
 </body>
-</html>
+</html

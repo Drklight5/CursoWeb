@@ -4,7 +4,7 @@
     list-style: none;
     
 }
-.T-2{
+.Titulo1{
     display: flex;
     justify-content: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -40,4 +40,27 @@ body{
 
     width: 150px;
     height:50px;
+}
+.Titulo2{
+    display: flex;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(6, 68, 148);
+    padding: 20px;
+    padding-left: 40px;
+    font-size: 500%; 
+}
+.T-6{
+    width: 50%;
+    
+    position: static;
+    
+    border: 2px solid black;
+}
+.T-7{
+    display: flex;
+    justify-content: space-around;
+}
+.T-8{
+    width: 50%;
 }

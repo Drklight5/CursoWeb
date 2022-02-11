@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+    </style>
+</head>
+
+<head>
+<body id="bro">
+    <h1 id="h">Crea tu Sandwich o Muere :)</h1>
+    <p id="parf">Agrega Ingredientes</p>
+    <button onclick="pan()">Pan</button>
+    <button onclick="queso()">Queso</button>
+    <button onclick="algo()">Carlos</button>
+    <br/>
+    <button onclick="Prepar()" >Preparar</button>
+    <script type="text/javascript">
+        
+        var cantidad = 0;
+        var sandwich = "";
+
+        function pan(){
+                 cantidad= cantidad + 1;
+                sandwich = sandwich + "Pan, ";
+        }
+        function queso(){
+                cantidad = cantidad + 1;
+                sandwich = sandwich + "Queso, ";
+        }
+        function algo(){
+            cantidad = cantidad + 1;
+            sandwich = sandwich + "Algo, ";
+        }
+        function Prepar(){
+            alert(sandwich + cantidad);
+            cantidad = 0;
+        }
+    </script>
+</body>
+</html>
