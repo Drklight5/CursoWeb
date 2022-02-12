@@ -69,3 +69,17 @@ body{
     
     border: 2px solid black;
 }
+.recomendado{
+    text-align: center;
+    
+    color: aliceblue;
+    background-color: black;
+    border-radius: 5px;
+}
+.vendido{
+    text-align: center;
+    
+    color: aliceblue;
+    background-color: rgb(231, 105, 1);
+    border-radius: 5px;
+}
