@@ -31,11 +31,11 @@
         <main class="container position-relative">
             <!-- PUERTA -->
             <button class="position-absolute top-50 start-50 translate-middle-y" onclick="pase();">
-                <img id="door" src="img/puerta_1_1_cerrada.png" alt="puerta_1" />
+                <img id="door" src="/Gold/Casas/img/puerta_1_1_cerrada.png" alt="puerta_1" />
             </button>
             <!-- LLAVE -->
             <button onclick="desblock();">
-                <img id="Oa" src="img/llave1.png" alt="puerta_1" />
+                <img id="Oa" src="/Gold/Casas/img/llave1.png" alt="puerta_1" />
             </button>
         
         </main>
@@ -45,15 +45,15 @@
             var openDoor = false;
             function pase(){
                 if (openDoor == true){
-                    window.open("LEVEL2.html", "_self");
+                    window.open("LEVEL1.html", "_self");
                 }
                 else{
-                    alert("Y la llave?");
+                    alert("Nota: Consigue la LLave");
                 }
             }
             function desblock(){
                 openDoor =  true;
-                document.getElementById("door").src = "img/puerta_1_1.png";
+                document.getElementById("door").src = "/Gold/Casas/img/puerta_1_1.png";
                 document.getElementById("Oa").classList.add("invisible");
             }
                 
