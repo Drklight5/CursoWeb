@@ -7,6 +7,9 @@
     <title>MiPagina</title>
     <style>
         body {
+            height: 900px;
+        }
+        main {
             display:flex;
             flex-direction: column;
             align-items: center;
@@ -14,25 +17,32 @@
         a {
             text-decoration: none;
         }
+        .xd {
+            text-decoration: none;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <h1> Mi Pagina </h1>
+    <main>
+        <h1> Mi Pagina </h1>
         <a href="Web"> Entrar </a>
-        <a onclick="boton()">CodePig</a>
-        <script>
-            function boton(){
-                n1 = parseInt(prompt("Ingresa Un Codigo"))
-                if (n1 == 8340){
-                    window.open("/Kemush/Web2/index.html");
-                }
+        <a onclick="boton()" onclick="boton2()">CodePig</a>
+        <a class="xd" onclick="code()" onclick="boton2()">Code</a>
+    </main>
+    <script>
+        function boton(){
+            n1 = parseInt(prompt("Ingresa Un Codigo"))
+            if (n1 == 8340){
+                window.open("/Kemush/Web2/index.html");
             }
-            function boton() {
-                    n1 = parseInt(prompt("Ingresa Un Codigo"))
-                    if (n1 == 83115) {
-                        window.open("/Kemush/Web5/index.html");
-                    }
-                }
-        </script>
+        }
+        function code() {
+            n1 = parseInt(prompt("Ingresa Un Codigo"))
+            if (n1 == 83115) {
+            window.open("/Kemush/Web5/index.html");
+            }
+        }
+    </script>
 </body>
 </html
