@@ -5,7 +5,7 @@
             main{
             /*TAMAÑO DE LA PAGINA*/
                 width: 1000px;
-                height: 1000px;
+                height: 10000px;
             }
             
             button{
@@ -17,12 +17,12 @@
             }
             .PsP{
                 position:absolute;
-                top:500px;
-                left:500px;
+                top:100px;
+                left:1000px;
             }
             .PsLL{
                 position:absolute;
-                top:500px;
+                top:7500px;
                 left:500px;
             }
         </style>
@@ -30,12 +30,12 @@
     <body>
         <main class="container position-relative">
             <!-- PUERTA -->
-            <button class="position-absolute top-50 start-50 translate-middle-y" onclick="pase();">
-                <img id="door" src="/Gold/Casas/img/puerta_1_1_cerrada.png" alt="puerta_1" />
+            <button class="PsP" onclick="pase();">
+                <img id="door" src="/Gold/Casas/img/puerta_2_1_cerrada.png" alt="puerta_1" />
             </button>
             <!-- LLAVE -->
             <button onclick="desblock();">
-                <img id="Oa" src="/Gold/Casas/img/llave1.png" alt="puerta_1" />
+                <img class="PsLL" id="Oa" src="/Gold/Casas/img/llave1.png" alt="puerta_1" />
             </button>
         
         </main>
@@ -45,15 +45,15 @@
             var openDoor = false;
             function pase(){
                 if (openDoor == true){
-                    window.open("LEVEL1.html", "_self");
+                    window.open("LEVEL3.html", "_self");
                 }
                 else{
-                    alert("Nota: Consigue la LLave");
+                    alert("Nota: Busca la LLave");
                 }
             }
             function desblock(){
                 openDoor =  true;
-                document.getElementById("door").src = "/Gold/Casas/img/puerta_1_1.png";
+                document.getElementById("door").src = "/Gold/Casas/img/puerta_2_1.png";
                 document.getElementById("Oa").classList.add("invisible");
             }
                 
