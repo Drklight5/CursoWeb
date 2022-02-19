@@ -17,10 +17,20 @@
             }
             .PsP{
                 position:absolute;
-                top:500px;
-                left:500px;
+                top:100px;
+                left:1000px;
+            }
+            .PsP2{
+                position:absolute;
+                top:250px;
+                left:0px;
             }
             .PsLL{
+                position:absolute;
+                top:500px;
+                left:5px;
+            }
+            .PsLL2{
                 position:absolute;
                 top:500px;
                 left:500px;
@@ -30,30 +40,48 @@
     <body>
         <main class="container position-relative">
             <!-- PUERTA -->
-            <button class="position-absolute top-50 start-50 translate-middle-y" onclick="pase();">
-                <img id="door" src="/Gold/Casas/img/puerta_1_1_cerrada.png" alt="puerta_1" />
+            <button class="PsP" onclick="pase();">
+                <img id="door" src="/Gold/Casas/img/puerta_5_1cerrada.png" alt="puerta_" />
             </button>
+
+            <button class="PsP2" onclick="pase2();">
+                <img id="door2" src="/Gold/Casas/img/puerta_5_1cerrada.png" alt="puerta_" />
+            </button>
+            
+
+         
             <!-- LLAVE -->
             <button onclick="desblock();">
-                <img id="Oa" src="/Gold/Casas/img/llave1.png" alt="puerta_1" />
+                <img class="PsLL" id="Oa" src="/Gold/Casas/img/llave1.png" alt="puerta_1" />
             </button>
+
+        
         
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script>
             //-------------------//
             var openDoor = false;
+            var openDoor2 = false;
             function pase(){
                 if (openDoor == true){
-                    window.open("LEVEL1.html", "_self");
+                    window.open("LEVEL_GOLD.html", "_self");
                 }
                 else{
-                    alert("Nota: Consigue la LLave");
+                    alert("Nota: La Puerta se an duplicado");
                 }
             }
+            function pase2(){
+                if (openDoor == true){
+                    window.open("LEVEL_RED1.html", "_self");
+                }
+            }
+
             function desblock(){
                 openDoor =  true;
-                document.getElementById("door").src = "/Gold/Casas/img/puerta_1_1.png";
+                openDoor2 =  true;
+                document.getElementById("door").src = "/Gold/Casas/img/puerta_5_1.png";
+                document.getElementById("door2").src = "/Gold/Casas/img/puerta_5_1.png";
                 document.getElementById("Oa").classList.add("invisible");
             }
                 

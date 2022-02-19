@@ -1,0 +1,244 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <style>
+            main{
+            /*TAMAÑO DE LA PAGINA*/
+                width: 1000px;
+                height: 10000px;
+            }
+            
+            button{
+                background-color: transparent;
+                border-color: transparent;
+            }
+            .invisible{
+                display:none;
+            }
+            .PsP{
+                position:absolute;
+                top:50px;
+                left:0px;
+            }
+            .PsP2{
+                position:absolute;
+                top:50px;
+                left:200px;
+            }
+            .PsP3{
+                position:absolute;
+                top:50px;
+                left:400px;
+            }
+            .PsP4{
+                position:absolute;
+                top:50px;
+                left:600px;
+            }
+            .PsP5{
+                position:absolute;
+                top:50px;
+                left:800px;
+            }
+            .PsP6{
+                position:absolute;
+                top:50px;
+                left:1000px;
+            }
+            .PsP7{
+                position:absolute;
+                top:10000px;
+                left:5000px;
+            }
+
+
+
+
+            .PsLL{
+                position:absolute;
+                top:500px;
+                left:5px;
+            }
+            .PsLL2{
+                position:absolute;
+                top:500px;
+                left:500px;
+            }
+            .PsLL3{
+                position:absolute;
+                top:100px;
+                left:5px;
+            }
+            .PsLL4{
+                position:absolute;
+                top:500px;
+                left:1000px;
+            }
+            .PsLL5{
+                position:absolute;
+                top:5000px;
+                left:5px;
+            }
+            .PsLL6{
+                position:absolute;
+                top:250px;
+                left:500px;
+            }
+            .PsLL7{
+                position:absolute;
+                top:500px;
+                left:5px;
+            }
+            .PsLL8{
+                position:absolute;
+                top:600px;
+                left:500px;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container position-relative">
+            <!-- PUERTA -->
+            <button class="PsP" onclick="pase();">
+                <img id="door" src="/Gold/Casas/img/Puerta_Gold_Cerrada_.png" alt="puerta_" />
+            </button>
+
+            <button class="PsP2" onclick="pase2();">
+                <img id="door2" src="/Gold/Casas/img/Puerta_Gold_Cerrada_.png" alt="puerta_" />
+            </button>
+
+            <button class="PsP3" onclick="pase3();">
+
+                <img id="door3" src="/Gold/Casas/img/Puerta_Gold_Cerrada_.png" alt="puerta_" />
+            </button>
+
+            <button class="PsP4" onclick="pase4();">
+                <img id="door4" src="/Gold/Casas/img/Puerta_Gold_Cerrada_.png" alt="puerta_" />
+            </button>
+            
+            <button class="PsP5" onclick="pase5();">
+                <img id="door5" src="/Gold/Casas/img/Puerta_Gold_Cerrada_.png" alt="puerta_" />
+            </button>
+
+            <button class="PsP6" onclick="pase6();">
+                <img id="door6" src="/Gold/Casas/img/Puerta_Gold_Cerrada_.png" alt="puerta_" />
+            </button>
+
+            <button class="PsP7" onclick="pase7();">
+                <img id="door7" src="/Gold/Casas/img/puerta_Gold_KEYCARD.png" alt="puerta_" />
+            </button>
+            
+
+         
+            <!-- LLAVE -->
+            <button onclick="desblock();">
+                <img class="PsLL" id="a1" src="/Gold/Casas/img/llaveGold.png" alt="puerta_1" />
+            </button>
+
+            <button onclick="desblock();">
+                <img class="PsLL2" id="a2" src="/Gold/Casas/img/llaveGold.png" alt="puerta_1" />
+            </button>
+
+            <button onclick="desblock();">
+                <img class="PsLL3" id="a3" src="/Gold/Casas/img/llaveGold.png" alt="puerta_1" />
+            </button>
+
+            <button onclick="desblock();">
+                <img class="PsLL4" id="a4" src="/Gold/Casas/img/llaveGold.png" alt="puerta_1" />
+            </button>
+
+            <button onclick="desblock();">
+                <img class="PsLL5" id="a5" src="/Gold/Casas/img/llaveGold.png" alt="puerta_1" />
+            </button>
+
+            <button onclick="desblock();">
+                <img class="PsLL6" id="a6" src="/Gold/Casas/img/llaveGold.png" alt="puerta_1" />
+            </button>
+
+            <button onclick="desblock();">
+                <img class="PsLL7" id="a7" src="/Gold/Casas/img/llaveGold.png" alt="puerta_1" />
+            </button>
+
+            <button onclick="desblock();">
+                <img class="PsLL8" id="a8" src="/Gold/Casas/img/GoldenKey.png" alt="puerta_1" />
+            </button>
+
+            
+
+        
+        
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+            //-------------------//
+            var openDoor = false;
+            var openDoor2 = false;
+            var openDoor3 = false;
+            var openDoor4 = false;
+            var openDoor5 = false;
+            var openDoor6 = false;
+            function pase(){
+                if (openDoor == true){
+                    window.open("LEVEL_6.html", "_self");
+                }
+                else{
+                    alert("Nota: Code:");
+                }
+            }
+            function pase2(){
+                if (openDoor == true){
+                    window.open("LEVEL_6.html", "_self");
+                }
+                else{
+                    alert("Nota: 3");
+                }
+            }
+            function pase3(){
+                if (openDoor == true){
+                    window.open("LEVEL_6.html", "_self");
+                }
+                else{
+                    alert("Nota: 7");
+                }
+            }
+            function pase4(){
+                if (openDoor == true){
+                    window.open("LEVEL_6.html", "_self");
+                }
+                else{
+                    alert("Nota: 6");
+                }
+            }
+            function pase5(){
+                if (openDoor == true){
+                    window.open("LEVEL_6.html", "_self");
+                }
+                else{
+                    alert("Nota: 8");
+                }
+            }
+            function pase6(){
+                if (openDoor == true){
+                    window.open("LEVEL_6.html", "_self");
+                }
+                else{
+                    alert("Nota: 3");
+                }
+            }
+           
+
+            function desblock(){
+                openDoor =  true;
+                openDoor2 =  true;
+                document.getElementById("door").src = "/Gold/Casas/img/Puerta_Gold_.png";
+                document.getElementById("door2").src = "/Gold/Casas/img/Puerta_Gold_.png";
+                document.getElementById("door3").src = "/Gold/Casas/img/Puerta_Gold_.png";
+                document.getElementById("door4").src = "/Gold/Casas/img/Puerta_Gold_.png";
+                document.getElementById("door5").src = "/Gold/Casas/img/Puerta_Gold_.png";
+                document.getElementById("door6").src = "/Gold/Casas/img/Puerta_Gold_.png";
+                document.getElementById("Oa").classList.add("invisible");
+            }
+                
+        </script>
+    </body>
+</html>
