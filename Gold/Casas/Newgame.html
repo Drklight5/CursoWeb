@@ -4,58 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The New Game</title>
+    <title>Click Pig</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
-        <style>
+        <style >
             main{
             /*TAMAÑO DE LA PAGINA*/
                 width: 1000px;
                 height: 1000px;
             }
-            
+            .fondo{
+    background-color:rgb(255, 215, 220); 
+}
             button{
+                background-color:  rgb(233, 173, 181);
+                border-color: rgb(233, 173, 181);
+                color: rgb(255, 255, 255);
+            }
+            .button{
                 background-color: transparent;
                 border-color: rgb(0, 183, 255);
             }
+            .cashcash{
+                color: rgb(255, 193, 59);
+                position: absolute;
+                top: 13%;
+                left: 25%;
+            }
             .dondeclick{
                 position:absolute;
-                top:50%;
-                left:25%;
+                top:20%;
+                left:10%;
+                background-color: transparent;
+                border-color: transparent;
             }
             .compra1{
+                position:absolute;
+                top:73%;
+                left:20%;
+                
+            }
+            .compra2{
                 position:absolute;
                 top:78%;
                 left:20%;
             }
+            .compra3{
+                position:absolute;
+                top:83%;
+                left:20%;
+            }
+            .compra4{
+                position:absolute;
+                top:88%;
+                left:20%;
+            }
+            .compra5{
+                position:absolute;
+                top:93%;
+                left:20%;
+            }
         </style>
 </head>
-<body>
-    <button id="Click" class="dondeclick" onclick="clicke();">click</button>
-    <button id="compra1" class="compra1" onclick="masvalue();">60 money ( + 1 Click )</button>
-    <button id="ver"  onclick="ver()">money</button>
+<body class="fondo">
+<h1 class=cashcash id="dinero"></h1>
+    <button id="Click" class="dondeclick" onclick="clicke();"><img src="/Gold/Casas/img/Pig.png"></img></button>
+    <button id="compra1" class="compra1" onclick="masvalue();">50 Gold ( + 1 Click )</button>
+    <button id="compra2" class="compra2" onclick="masvalue2();">500 Gold ( + 10 Click )</button>
+    <button id="compra3" class="compra3" onclick="masvalue3();">5000 Gold ( + 100 Click )</button>
+    <button id="compra4" class="compra4" onclick="masvalue4();">50000 Gold ( + 1000 Click )</button>
+    <button id="compra5" class="compra5" onclick="masvalue5();">500000 Gold ( + 10000 Click )</button>
+
 </body>
 <script type="text/javascript">
-    //-------------------//
-    
-    var money = 0;
+    var money = 0;//-------------------//
+    var faltamoney = 50 - money;
+    var faltamoney1 = 50
     var value = 1;
     var compra1 = false
     
     function masvalue(){
-        if (money >= 0){
-        money = money - 60;            
+         
+        if (money >= faltamoney1){
+        money = money - faltamoney1; 
+        faltamoney1 = faltamoney1 * 1.1;           
         value = value + 1;
         }
+        else{
+            faltamoney = 50 - money;
+             alert(faltamoney);
+                }
+                document.getElementById("dinero").innerHTML = `${money} Gold`;
     }
-
+    function masvalue2(){
+        if (money >= 500){
+        money = money - 500;            
+        value = value + 10;
+        }
+        else{
+            faltamoney = 500 - money;
+             alert(faltamoney);
+                }
+                document.getElementById("dinero").innerHTML = `${money} Gold`;
+    }
+    function masvalue3(){
+        if (money >= 5000){
+        money = money - 5000;            
+        value = value + 100;
+        }
+        else{
+            faltamoney = 5000 - money;
+             alert(faltamoney);
+                }
+                document.getElementById("dinero").innerHTML = `${money} Gold`;
+    }
+    function masvalue4(){
+        if (money >= 50000){
+        money = money - 50000;            
+        value = value + 1000;
+        }
+        else{
+            faltamoney = 50000 - money;
+             alert(faltamoney);
+                }
+                document.getElementById("dinero").innerHTML = `${money} Gold`;
+    }
+    function masvalue5(){
+        if (money >= 500000){
+        money = money - 500000;            
+        value = value + 10000;
+        }
+        else{
+            faltamoney = 500000 - money;
+             alert(faltamoney);
+                }
+                document.getElementById("dinero").innerHTML = `${money} Gold`;
+    }
     function clicke(){
         money = money + value;
+        document.getElementById("dinero").innerHTML = `${money} Gold`; 
 
     }
-    
-    function ver(){
-    alert(money);
-    }
-
 </script>
 </html>
