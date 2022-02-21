@@ -28,39 +28,18 @@
                 color: rgb(255, 193, 59);
                 position: absolute;
                 top: 13%;
-                left: 25%;
+                left: 47%;
             }
             .dondeclick{
                 position:absolute;
                 top:20%;
-                left:10%;
+                left:40%;
                 background-color: transparent;
                 border-color: transparent;
             }
             .compra1{
                 position:absolute;
-                top:73%;
-                left:20%;
-                
-            }
-            .compra2{
-                position:absolute;
-                top:78%;
-                left:20%;
-            }
-            .compra3{
-                position:absolute;
-                top:83%;
-                left:20%;
-            }
-            .compra4{
-                position:absolute;
-                top:88%;
-                left:20%;
-            }
-            .compra5{
-                position:absolute;
-                top:93%;
+                top:30%;
                 left:20%;
             }
         </style>
@@ -69,76 +48,31 @@
 <h1 class=cashcash id="dinero"></h1>
     <button id="Click" class="dondeclick" onclick="clicke();"><img src="/Gold/Casas/img/Pig.png"></img></button>
     <button id="compra1" class="compra1" onclick="masvalue();">50 Gold ( + 1 Click )</button>
-    <button id="compra2" class="compra2" onclick="masvalue2();">500 Gold ( + 10 Click )</button>
-    <button id="compra3" class="compra3" onclick="masvalue3();">5000 Gold ( + 100 Click )</button>
-    <button id="compra4" class="compra4" onclick="masvalue4();">50000 Gold ( + 1000 Click )</button>
-    <button id="compra5" class="compra5" onclick="masvalue5();">500000 Gold ( + 10000 Click )</button>
-
 </body>
 <script type="text/javascript">
-    var money = 0;//-------------------//
-    var faltamoney = 50 - money;
-    var faltamoney1 = 50
+    var money = 0; 
+    var costo = 50;
+    var faltamoney = costo - money;
+   
     var value = 1;
-    var compra1 = false
+    var compra1 = false;
     
     function masvalue(){
          
-        if (money >= faltamoney1){
-        money = money - faltamoney1; 
-        faltamoney1 = faltamoney1 * 1.1;           
+        if (money >= costo){
+        money = money - costo;
         value = value + 1;
+        costo = costo * 1.1;
+        
         }
         else{
-            faltamoney1 = faltamoney - money;
+            faltamoney = costo - money;
              alert(faltamoney);
+
                 }
                 document.getElementById("dinero").innerHTML = `${money} Gold`;
     }
-    function masvalue2(){
-        if (money >= 500){
-        money = money - 500;            
-        value = value + 10;
-        }
-        else{
-            faltamoney = 500 - money;
-             alert(faltamoney);
-                }
-                document.getElementById("dinero").innerHTML = `${money} Gold`;
-    }
-    function masvalue3(){
-        if (money >= 5000){
-        money = money - 5000;            
-        value = value + 100;
-        }
-        else{
-            faltamoney = 5000 - money;
-             alert(faltamoney);
-                }
-                document.getElementById("dinero").innerHTML = `${money} Gold`;
-    }
-    function masvalue4(){
-        if (money >= 50000){
-        money = money - 50000;            
-        value = value + 1000;
-        }
-        else{
-            faltamoney = 50000 - money;
-             alert(faltamoney);
-                }
-                document.getElementById("dinero").innerHTML = `${money} Gold`;
-    }
-    function masvalue5(){
-        if (money >= 500000){
-        money = money - 500000;            
-        value = value + 10000;
-        }
-        else{
-            faltamoney = 500000 - money;
-             alert(faltamoney);
-                }
-                document.getElementById("dinero").innerHTML = `${money} Gold`;
-    }
+
     function clicke(){
         money = money + value;
         document.getElementById("dinero").innerHTML = `${money} Gold`; 
