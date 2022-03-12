@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click Pig</title>
+    <title id="titile">Click Pig</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
         <style >
             main{
@@ -40,18 +40,25 @@
             .compra1{
                 position:absolute;
                 top:30%;
-                left:20%;
+                left:16%;
+            }
+            .compra2{
+                position:absolute;
+                top:35%;
+                left:16%;
             }
         </style>
 </head>
 <body class="fondo">
 <h1 class=cashcash id="dinero"></h1>
     <button id="Click" class="dondeclick" onclick="clicke();"><img src="/Gold/Casas/img/Pig.png"></img></button>
-    <button id="compra1" class="compra1" onclick="masvalue();">50 Gold ( + 1 Click )</button>
+    <button id="compra1" class="compra1" onclick="masvalue();">50 Gold (+ 1 Click)</button>
+    <button id="compra2" class="compra2" onclick="masvalue2();">500 Gold (x 2 Click)</button>
 </body>
 <script type="text/javascript">
     var money = 0; 
     var costo = 50;
+    var costo2 = 500;
     var faltamoney = costo - money;
    
     var value = 1;
@@ -62,7 +69,7 @@
         if (money >= costo){
         money = money - costo;
         value = value + 1;
-        costo = costo * 1.1;
+        costo = costo * 2.5;
         
         }
         else{
@@ -71,7 +78,25 @@
 
                 }
                 document.getElementById("dinero").innerHTML = `${money} Gold`;
+                document.getElementById("compra1").innerHTML = `${costo} Gold (+ 1 Click)`;
     }
+
+    function masvalue2(){
+         
+         if (money >= costo2){
+         money2 = money2 - costo2;
+         value = value * 2;
+         costo2 = costo2 * 2.5;
+         
+         }
+         else{
+             faltamoney = costo2 - money2;
+              alert(faltamoney);
+ 
+                 }
+                 document.getElementById("dinero").innerHTML = `${money2} Gold`;
+                 document.getElementById("compra1").innerHTML = `${costo2} Gold (x2 Click)`;
+     }
 
     function clicke(){
         money = money + value;

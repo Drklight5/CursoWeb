@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    <h1 id="sus">Mi vida</h1>
+    <button onclick="sustito()">Ataque</button>
+    <button onclick="sustos()">Ataque x5</button>
+    <button onclick="sustote()">Ataques infinitos</button>
+    <button onclick="add()">Mas vida</button>
+    <button onclick="add()">Curandose</button>
+    <button onclick="stop()">Parar</button>
+    <script>
+        var vida = 10;
+        var ataque = 1; 
+        var vida2 = 15
+
+        
+        function sustito(){
+            vida = vida - ataque;
+            if (vida <= 0) 
+            {
+                vida = vida + vida2
+                vida2 = vida2 * 2
+            }
+            document.getElementById("sus").innerHTML = vida;
+        }
+        function sustos(){
+            for (i = 0 ; i < 5 ; i ++)
+            {
+                vida = vida - ataque;
+                if (vida <= 0) 
+                {
+                    vida = vida + vida2
+                    vida2 = vida2 * 2
+                }
+                document.getElementById("sus").innerHTML = vida;
+            }
+        }
+       
+        function sustote(){
+             while (vida > 0){
+                    vida = vida - ataque;
+                    document.getElementById("sus").innerHTML = vida;
+            }
+           }
+           var papas = true;
+           function add(){
+               papas = true
+             while (papas){
+                vida++;
+            }
+           }
+
+           function stop(){
+             
+                   papas = false;
+                    document.getElementById("sus").innerHTML = vida;
+            }
+           
+
+
+    </script>
+</body>
+</html>
