@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soy Ipa</title>
+    <title>For</title>
 </head>
-<body bgcolor="#D1F2EB">
-    <h1>Izel si I Z E L, sin "t" </h1>
+<body>
+    <h1 id="sus">Mi vida</h1>
+    <button onclick="sustito()">Ataque</button>
+    <button onclick="sustos()">Ataque x5</button>
+    <button onclick="sustote()">Ataque infinitos</button>
+    <script>
+        var vida = 50;
+        var ataque = 5;
+        function sustito(){
+            vida = vida - ataque;
+            document.getElementById("sus").innerHTML = vida;
+        }
+    </script>
 </body>
 </html>
