@@ -4,7 +4,7 @@
 
 
 
-
+var numero = 0;
 var zombie = {
     tipo: "normal",
     fuerza: 5,
@@ -21,7 +21,8 @@ var zombie = {
         }
     },
     muere:function(){
-        console.log("El zombie murió")
+        console.log("El zombie murió");
+        document.getElementById("resultado").innerHTML = "El zombie murio, te tomó " + numero + "intentos"
     }
 }
 var zombiechiquito = Object.create(zombie);
@@ -30,13 +31,14 @@ zombiechiquito.tamaño = "chiquito"
 var lanzaguisante = {
     daño: 6,
     ataque: function(){
-        zombie.daño(lanzaguisante.daño);
+        console.log("hace daño de " + this.daño);
+        numero = numero + 1;
     }
 };
 var comecome = {
     comer: 1 ,
     come:function(){
-        console.log("comer");
+        console.log("comer" + this.comer);
     }
 };
 var nuez = {
@@ -54,6 +56,11 @@ var bomba = {
 var sandia = {
     daño: 10,
     ataque: function(){
-        zombie.daño(sandia.daño);
+        console.log("tiene un ataque de " + this.daño);
+        numero = numero + 1;  
     }
 }
+
+
+document.getElementById("title").innerHTML = "mata es zombie";
+document.getElementById("description").innerHTML = "El zombie tiene " + zombie.vida + "de vida";
