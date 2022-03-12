@@ -1,6 +1,4 @@
-var kaka = false;
-var edad;
-var nombre;
+var numero = 0;
 
 if (kaka){
     edad = parseInt(prompt("bruh"));
@@ -10,7 +8,7 @@ if (kaka){
 
 var zombie = {
     tipo: "Microfono",
-    fuerza: "-10",
+    fuerza: 10,
     vida: 12,
     velocidad: 0.1, 
     comer:function(){
@@ -18,7 +16,7 @@ var zombie = {
     },
     daño:function(daño){
         zombie.vida = zombie.vida - daño;
-        if(zombie.vida < 0){
+        if(zombie.vida < 0){    
             zombie.muerto();    
         }
     },
@@ -31,7 +29,6 @@ var lanzamaiz = {
     encontrada: "marespiratas",
     daño: 3,
     ataqueEspecial: "aturdimiento de 3s",
-    vida: 5,
     ataque:function(){
         console.log("Lanzamaiz Muerto");
     }
@@ -59,4 +56,4 @@ zombie.daño(8);
 zombie.daño(35);
 console.log("el zombie es tipo: " + zombie.tipo);
 console.log("PogU: " + zombie.fuerza);
-console.log("La vida :v: " + zombie.vida);     
+console.log("La vida :v: " + zombie.vida);  

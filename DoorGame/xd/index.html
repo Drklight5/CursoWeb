@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0t</title>
+</head>
+<body>
+    <h1 id=sus>50</h1>
+    <button onclick="sustito()">ataque</button> 
+    <button onclick="sustito2()">ataque2</button>
+    <button onclick="sustito3()">ataque3</button>
+    <br/><br/>
+    <button onclick="add()">Ana</button>
+    <button onclick="stop()">Ano</button>
+    <script>
+        var vida = 50;
+        var ataque = 5; 
+        function sustito(){
+            vida = vida - ataque;
+            document.getElementById("sus").innerHTML = vida;
+
+        }
+        function sustito2() {
+            for (i = 0; i < 5; i++){
+                vida = vida - ataque;
+                document.getElementById("sus").innerHTML = vida;
+            }
+        }
+        function sustito3() {
+            var i = 0;
+            while (vida > 0){
+                vida = vida - ataque;
+                document.getElementById("sus").innerHTML = vida;
+                i++;
+            }
+        }
+        var papas = true;
+        function add() {
+            papas = true;
+            while(papas){
+                vida++;
+            }
+        }
+        function stop() {
+            papas = false;
+        }
+    </script>
+</body>
+</html>
