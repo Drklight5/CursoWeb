@@ -25,7 +25,7 @@
                 border-color: rgb(0, 183, 255);
             }
             .cashcash{
-                color: rgb(255, 193, 59);
+                color: rgb(170, 129, 40);
                 position: absolute;
                 top: 13%;
                 left: 47%;
@@ -47,6 +47,11 @@
                 top:35%;
                 left:16%;
             }
+            .compra3{
+                position:absolute;
+                top:40%;
+                left:16%;
+            }
         </style>
 </head>
 <body class="fondo">
@@ -54,6 +59,7 @@
     <button id="Click" class="dondeclick" onclick="clicke();"><img src="/Gold/Casas/img/Pig.png"></img></button>
     <button id="compra1" class="compra1" onclick="masvalue();">50 Gold (+ 1 Click)</button>
     <button id="compra2" class="compra2" onclick="masvalue2();">500 Gold (x 2 Click)</button>
+    <button id="compra3" class="compra3" onclick="masvalue3();">10 Gold (+ Gold Second)</button>
 </body>
 <script type="text/javascript">
     var money = 0; 
@@ -69,7 +75,7 @@
         if (money >= costo){
         money = money - costo;
         value = value + 1;
-        costo = costo * 2.5;
+        costo = costo * 2;
         
         }
         else{
@@ -101,6 +107,18 @@
     function clicke(){
         money = money + value;
         document.getElementById("dinero").innerHTML = `${money} Gold`; 
+    }
+    function masvalue2(){
+        var stopAdd2 = setTimeout(()=>{clearInterval(pepina2)},5000);
+        var pepina2 = setInterval(()=>{
+        money = money - 1;
+        if (money <= 0) 
+        {
+        vida = vida + vida2
+        vida2 = vida2 * 2
+        }
+        document.getElementById("sus").innerHTML = vida;
+        },100);
 
     }
 </script>
