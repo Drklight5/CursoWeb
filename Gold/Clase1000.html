@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <input id="valor" type="number"/>
+    <button onclick="pruebas()">:D</button>
+    <h1 id="Potencia"></h1>
+</body>
+<script>
+    
+    function pruebas()
+    {
+    var resulatado = document.getElementById("valor").value;
+    var respuesta = resulatado % 2;   
+
+    if (respuesta == 0)
+    document.getElementById("Potencia").innerHTML = `${resulatado} "Felicidades acabas de poner un numero par :D"`
+
+    else 
+    {
+        document.getElementById("Potencia").innerHTML = `${resulatado} "Eres macaco y no pusistes un numero par >:v"`
+
+    }
+    }
+    
+</script>
+</html>
