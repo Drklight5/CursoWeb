@@ -5,15 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0t</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
+    <main>
     <h1 id=sus>50</h1>
     <button onclick="sustito()">ataque</button> 
     <button onclick="sustito2()">ataque2</button>
     <button onclick="sustito3()">ataque3</button>
+    <button onclick="sustito4()">ataque4</button>
     <br/><br/>
     <button onclick="add()">Ana</button>
     <button onclick="stop()">Ano</button>
+    </main>
     <script>
         var vida = 50;
         var ataque = 5; 
@@ -39,12 +49,26 @@
         var papas = true;
         function add() {
             papas = true;
-            while(papas){
+            var pepino = setInterval(function(){
                 vida++;
-            }
+                document.getElementById("sus").innerHTML = vida;
+                if (papas == false){
+                    clearInterval(pepino)
+                }
+            },100);
         }
         function stop() {
             papas = false;
+        }
+        function sustito4(){
+            var xdd = setInterval(function(){
+                if (vida > 0){
+                    vida = vida - ataque;
+                    document.getElementById("sus").innerHTML = vida;
+                }else{
+                    clearInterval(xdd);
+                }
+            },100)
         }
     </script>
 </body>

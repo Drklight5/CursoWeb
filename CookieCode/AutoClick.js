@@ -1,0 +1,1 @@
+setInterval(()=>Game.ClickCookie(),10)

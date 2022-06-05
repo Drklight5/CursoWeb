@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44444444444444</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .xd {
+            height: 800px;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Cuenta</h1>
+        <button onclick="save2()"> Crear </button>
+        <br/>
+        <button onclick="save1()"> Cargar </button>
+        <br/>
+        <img src="/DoorGame/Cuarto/coca.jpg" class="xd"></img>
+    </main>
+    
+    <script>
+        var slot1;
+        var slot2;
+        function save2() {
+            slot1 = prompt("Usuario");
+            console.log(slot1);
+            slot2 = parseInt(prompt("Contraseña"));
+            console.log(slot2);
+        }
+        function save1() {
+            n1 = prompt("Ingresa Tu Usuario");
+            if (n1 == slot1) {
+            console.log(slot1);
+            n2 = prompt("Ingresa Tu Contraseña");
+            if (n2 == slot2) {
+                window.open("https://shop.mattel.com/pages/barbie")
+            }
+            }
+        }
+    </script>
+</body>
+</html>
