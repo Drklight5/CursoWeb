@@ -9,15 +9,60 @@
 <body>
     <h1 id="sus">Mi vida</h1>
     <button onclick="sustito()">Ataque</button>
-    <button onclick="sustos()">Ataque x5</button>
-    <button onclick="sustote()">Ataque infinitos</button>
+    <button onclick="susto()">Ataque x5</button>
+    <button onclick="suste()">Ataque infinitos</button>
+    <button onclick="sustos()">Ataque 25</button>
+    <button onclick="sustote()">Ataque mortal</button>
+    <br/><br/>
+    <button onclick="add()">Agregar vida</button>
+    <button onclick="stop()">Parar</button>
     <script>
         var vida = 50;
         var ataque = 5;
+        var ataque2 = 25;
+        var ataqueinf = vida;
         function sustito(){
             vida = vida - ataque;
             document.getElementById("sus").innerHTML = vida;
         }
+        function susto(){
+            for (i = 0 ; i < 5; i++){
+                
+                vida = vida - ataque;
+            document.getElementById("sus").innerHTML = vida;
+            }
+        }
+        function suste(){
+            while (vida > 0){
+
+                vida = vida - ataque;
+            document.getElementById("sus").innerHTML = vida;
+                alert("ataque")
+            }
+        }
+        function sustos(){
+            vida = vida - ataque2;
+            document.getElementById("sus").innerHTML = vida;
+        }
+        function sustote(){
+            vida = vida - ataqueinf;
+            document.getElementById("sus").innerHTML = vida;
+        }
+        var papas = true;
+        function add(){
+            papas = true;
+            while(papas){
+                vida++
+            }
+        }
+        function stop(){
+            papas = false;
+            document.getElementById("sus").innerHTML = vida;
+        }
+
+
+
+
     </script>
 </body>
 </html>
